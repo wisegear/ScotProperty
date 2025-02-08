@@ -9,7 +9,7 @@
         <link rel="canonical" href="{{ url()->current() }}">
         <meta name="author" content="Lee Wisener">
         <meta name="keywords" content="Mortgages, BTL, Lifetime, Rent, Borrowing, Inflation, CeMAP, CeRER">
-        <title>{{ $page->title ?? 'MortgageBlog.uk' }}</title>
+        <title>{{ $page->title ?? 'ScotProperty.com' }}</title>
         <meta name="description" content="{{ $page->summary ?? 'Mortgages - A Personal mortgage blog dedicated to all aspects of mortgage lending in the UK.' }}">
 
         @isset($page)
@@ -56,7 +56,7 @@
                     </ul>
                 </div>
                 <div class="flex-grow text-center">
-                    <p class="text-2xl font-bold dark:text-white">MortgageBlog<span class="text-lg font-normal text-gray-600 dark:text-gray-400">.uk</span></p>
+                    <p class="text-2xl font-bold dark:text-white">ScotProperty<span class="text-lg font-normal text-gray-600 dark:text-gray-400">.com</span></p>
                 </div>
                 <div class="w-2/12 flex justify-end">
                     <!-- Sun icon for Light Mode -->
@@ -268,7 +268,7 @@
 
         <!-- Footer Section -->
         <footer class="border-t dark:border-t-gray-700">
-            <p class="text-center text-sm font-bold text-gray-500 dark:text-gray-300 py-4">Copyright 2024, All rights Reserved.  <a href="/">MortgageBlog.uk</a> built and maintained by Lee Wisener</p>
+            <p class="text-center text-sm font-bold text-gray-500 dark:text-gray-300 py-4">Copyright 2024, All rights Reserved.  <a href="/">ScotProperty.com</a> built and maintained by Lee Wisener</p>
         </footer>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
