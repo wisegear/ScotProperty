@@ -46,6 +46,13 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <style>
+            /* Immediately hide the mobile nav */
+            #mobileMenu {
+                display: none !important;
+            }
+          </style>
+
     </head>
     <body class="flex flex-col font-sans antialiased min-h-screen max-w-screen-xl mx-auto px-4 xl:px-0 bg-white dark:bg-[#282c35]">
 
