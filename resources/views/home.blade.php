@@ -53,7 +53,7 @@
             <p class="text-center">Check out our Mortgage Calculator to understand what you will pay whether on a Capital Repayment or 
                 Interest Only basis. Also understand the impact stress rates being applied could have on payments.</p>
             <div class="text-center">
-                <a href="/calculators/mortgage-payments"><button class="mt-4 border dark:border-gray-700 rounded bg-lime-500 hover:bg-lime-400 text-black p-2 text-xs uppercase">Open Calculator</button></a>
+                <a href="/calculators/mortgage-payments"><button class="mt-4 border dark:border-gray-700 rounded bg-slate-500 hover:bg-slate-400 text-white p-2 text-xs uppercase">Open Calculator</button></a>
             </div>
         </div>
         <!-- Stamp Duty Calculator -->
@@ -62,7 +62,7 @@
             <p class="text-center">If you need to know what stamp duty will be paid on a property purchase, I have that covered as well. 
                 Click below to see the calculator which covers all regions in the UK.</p>
             <div class="text-center">
-                <a href="/calculators/stamp-duty"><button class="mt-4 border dark:border-gray-700 rounded bg-lime-500 hover:bg-lime-400 text-black p-2 text-xs uppercase">Open Calculator</button></a>
+                <a href="/calculators/stamp-duty"><button class="mt-4 border dark:border-gray-700 rounded bg-slate-500 hover:bg-slate-400 text-white p-2 text-xs uppercase">Open Calculator</button></a>
             </div>
         </div>
     </div>

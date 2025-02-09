@@ -16,7 +16,7 @@
             <input type="hidden" name="commentable_type" value="{{ get_class($model) }}">
             <input type="hidden" name="commentable_id" value="{{ $model->id }}">
             <textarea name="comment_text" class="w-full border rounded" rows="2" placeholder="Add your comment"></textarea>
-            <button type="submit" class="border rounded p-2 mt-2 bg-lime-500 hover:bg-lime-400 dark:border-gray-700">Submit Comment</button>
+            <button type="submit" class="border rounded p-2 mt-2 bg-slate-500 text-white text-sm hover:bg-slate-400 dark:border-gray-700">Submit Comment</button>
         </form>
     @endcan
     @guest

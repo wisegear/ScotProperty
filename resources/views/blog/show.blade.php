@@ -77,7 +77,7 @@
 
             <!-- Author Box -->
 
-            <div class="flex flex-col md:flex-row items-center rounded shadow-lg border bg-lime-100 dark:bg-gray-600 dark:border-gray-700 p-4 my-10 space-y-2">
+            <div class="flex flex-col md:flex-row items-center rounded shadow-lg border bg-slate-100 dark:bg-gray-600 dark:border-gray-700 p-4 my-10 space-y-2">
                 <div class="w-3/12 lg:w-2/12">
                     <img src="/assets/images/avatars/{{ $page->users->avatar }}" class="mx-auto rounded-full h-20 border border-gray-400 p-1">
                 </div>
@@ -92,6 +92,39 @@
                     @endif   
                 </div>
             </div>
+
+            <!-- Previous / Next Navigation -->
+            @if ($previousPage || $nextPage)
+                <div class="flex justify-between space-x-10 items-center mb-10">
+                    @if ($previousPage)
+                        <a href="{{ url('/blog/' . $previousPage->slug) }}"
+                        class="text-slate-500 flex items-center">
+                            <div class="flex gap-4 items-center p-2">
+                                <i class="fa-solid fa-arrow-left ml-2"></i>
+                                <div>
+                                    <h3 class="font-semibold">{{ $previousPage->title }}</h3>
+                                </div>
+                            </div>
+                        </a>
+                    @else
+                        <span>No Older Posts</span> <!-- preserves space on the left if no previous -->
+                    @endif
+                    
+                    @if ($nextPage)
+                        <a href="{{ url('/blog/' . $nextPage->slug) }}"
+                        class="text-slate-500 flex items-center">
+                            <div class="flex gap-4 items-center p-2">
+                                <div>
+                                    <h3 class="font-semibold">{{ $nextPage->title }}</h3>
+                                </div>
+                                <i class="fa-solid fa-arrow-right mr-2"></i>
+                            </div>
+                        </a>
+                    @else
+                        <span>No Newer Posts</span> <!-- preserves space on the right if no next -->
+                    @endif
+                </div>
+            @endif
 
             <!-- Comments section, layout and formatting handled in comments.blade.php -->
 

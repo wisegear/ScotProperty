@@ -72,9 +72,10 @@
             <div class="hidden md:block my-6">
                 <h2 class="text-lg font-bold border-b dark:border-b-gray-700 mb-4">Popular Tags</h2>
                 @foreach ($popular_tags as $tag)
-                    <button class="mr-2 mb-4">
-                        <a href="/blog?tag={{ $tag->name }}" class="border p-1 text-xs uppercase bg-slate-600 text-white hover:bg-slate-400 hover:text-white rounded">{{ $tag->name }}</a>
-                    </button>
+                <a href="/blog?tag={{ $tag->name }}" class="">
+                    <button class="mr-2 mb-4 p-1 text-xs uppercase bg-slate-600 text-white hover:bg-slate-400 hover:text-white rounded">{{ $tag->name }}</button>
+                </a>
+                   
                 @endforeach
             </div>
             @can('Admin')

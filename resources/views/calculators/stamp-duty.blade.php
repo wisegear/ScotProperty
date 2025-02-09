@@ -72,7 +72,7 @@
                         {{ $message }}
                     </div>
                 @enderror
-                <button type="submit" class="mt-4 bg-lime-400 text-slate-800 hover:bg-lime-600 hover:text-white py-2 px-4 rounded">
+                <button type="submit" class="mt-4 bg-slate-500 text-slate-100 hover:bg-slate-400 hover:text-white py-2 px-4 rounded uppercase text-sm font-semibold">
                     Calculate
                 </button>
             </div>

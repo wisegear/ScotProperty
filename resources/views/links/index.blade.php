@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 
-    <div class="flex flex-col items-center space-y-4 bg-lime-200 dark:bg-gray-300 p-6 rounded shadow-lg">
+    <div class="flex flex-col items-center space-y-4 bg-slate-100 dark:bg-slate-700 dark:text-white p-6 rounded shadow-lg">
         <h2 class="font-bold text-2xl">Links Section</h2>
         <p class="text-center w-2/3 ">This section contains useful links to various sites that provide infomration, tools, calculators and so on 
         related to mortgages that I have checked and verified as safe and correct.</p>
@@ -18,7 +18,7 @@
                             <a href="{{ $link->url }}"><h2 class="font-bold text-lg dark:text-white">{{ $link->title }}</h2></a>
                             <div class="dark:text-white text-gray-500">{!! $link->description !!}</div>
                             <a href="{{ $link->url }}">
-                                <button class="self-start inline-block border dark:border-gray-600 rounded py-1 px-2 bg-lime-300 my-2 hover:bg-lime-400 dark:hover:text-black text-xs ">
+                                <button class="self-start inline-block border dark:border-gray-600 text-white rounded py-1 px-2 bg-slate-500 my-2 hover:bg-slate-400 dark:hover:text-black text-xs ">
                                     Visit Website
                                 </button>
                             </a>

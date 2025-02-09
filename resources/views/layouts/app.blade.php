@@ -37,6 +37,11 @@
         <!-- FontAwesome -->
         <script src="https://kit.fontawesome.com/0ff5084395.js" crossorigin="anonymous"></script>
 
+        <!-- Venobox css -->
+        <link rel="stylesheet" href="{{ asset('assets/css/venobox.min.css') }}" type="text/css" media="screen" />
+        <script type="text/javascript" src="{{ asset('assets/js/venobox.min.js') }}"></script>
+
+
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -272,5 +277,7 @@
         </footer>
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+        <!-- jQuery (Add it before other scripts update to 3.6.4) -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </body>
 </html>

@@ -30,7 +30,7 @@
                 <div>
                     <input type="text" class="border border-gray-300 p-2 w-full" name="rate" id="rate" placeholder="Enter rate (i.e 2.99)" value="{{ old('rate') }}">
                 </div>
-                <button class="bg-lime-400 text-slate-800 rounded hover:bg-lime-600 hover:text-white font-semibold text-sm w-1/4 md:w-20
+                <button class="bg-slate-500 text-white rounded text-sm hover:bg-slate-400 hover:text-white font-semibold text-sm w-1/4 md:w-20
                                  dark:bg-gray-500 dark:hover:bg-gray-300 dark:text-gray-200 dark:hover:text-gray-700 py-2" type="submit" name="submit">SUBMIT</button>
             </form>
         </div>
