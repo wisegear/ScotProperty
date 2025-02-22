@@ -222,52 +222,7 @@
     </div>
 </div>
 
-<!-- JavaScript for toggling the mobile menu and dropdowns -->
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
-        const mobileMenu = document.getElementById('mobileMenu');
 
-        // Mobile dropdown toggles
-        const mobileCalculatorDropdownToggle = document.getElementById('mobileCalculatorDropdownToggle');
-        const mobileCalculatorDropdown = document.getElementById('mobileCalculatorDropdown');
-
-        const mobileUserDropdownToggle = document.getElementById('mobileUserDropdownToggle');
-        const mobileUserDropdown = document.getElementById('mobileUserDropdown');
-
-        // Toggle the mobile menu
-        mobileMenuToggle.addEventListener('click', (event) => {
-            event.preventDefault();
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Toggle the Calculators dropdown in the mobile menu
-        if (mobileCalculatorDropdownToggle) {
-            mobileCalculatorDropdownToggle.addEventListener('click', (event) => {
-                event.preventDefault();
-                mobileCalculatorDropdown.classList.toggle('hidden');
-            });
-        }
-
-        // Toggle the User dropdown in the mobile menu
-        if (mobileUserDropdownToggle) {
-            mobileUserDropdownToggle.addEventListener('click', (event) => {
-                event.preventDefault();
-                mobileUserDropdown.classList.toggle('hidden');
-            });
-        }
-
-        // Handle toggling of mobile article category dropdowns
-        document.querySelectorAll('[id^="mobileCategoryDropdownToggle-"]').forEach(toggle => {
-            toggle.addEventListener('click', (event) => {
-                event.preventDefault();
-                const dropdownId = toggle.id.replace('Toggle', '');
-                const dropdown = document.getElementById(dropdownId);
-                dropdown.classList.toggle('hidden');
-            });
-        });
-    });
-</script>
 
         <!-- Content Section -->
         <div class="flex-grow my-10">
