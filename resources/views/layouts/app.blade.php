@@ -28,6 +28,9 @@
         <meta property="og:image" content="{{ asset($page->small_image) }}" />
         @endisset
 
+        <!-- moved this to the top due to FOUC -->
+        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
 
         <!-- Favicon -->
         <link rel="icon" type="image/svg+xml" href="{{ asset('/assets/images/site/house.svg') }}">
@@ -275,8 +278,7 @@
         <footer class="border-t dark:border-t-gray-700">
             <p class="text-center text-sm font-bold text-gray-500 dark:text-gray-300 py-4">Copyright 2024, All rights Reserved.  <a href="/">ScotProperty.com</a> built and maintained by Lee Wisener</p>
         </footer>
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
+
         <!-- jQuery (Add it before other scripts update to 3.6.4) -->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     </body>
