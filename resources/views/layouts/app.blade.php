@@ -42,7 +42,7 @@
 
         <!-- Venobox css -->
         <link rel="stylesheet" href="{{ asset('assets/css/venobox.min.css') }}" type="text/css" media="screen" />
-        <script type="text/javascript" src="{{ asset('assets/js/venobox.min.js') }} defer"></script>
+        <script type="text/javascript" src="{{ asset('assets/js/venobox.min.js') }}"></script>
 
 
         <!-- Fonts -->
