@@ -38,7 +38,7 @@
         <title>{{ config('app.name', 'TheHolocaust') }}</title>
 
         <!-- FontAwesome -->
-        <script src="https://kit.fontawesome.com/0ff5084395.js" crossorigin="anonymous"></script>
+        <script async src="https://kit.fontawesome.com/0ff5084395.js" crossorigin="anonymous"></script>
 
         <!-- Venobox css -->
         <link rel="stylesheet" href="{{ asset('assets/css/venobox.min.css') }}" type="text/css" media="screen" />
