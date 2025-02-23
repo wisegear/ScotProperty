@@ -42,7 +42,7 @@
 
         <!-- Venobox css -->
         <link rel="stylesheet" href="{{ asset('assets/css/venobox.min.css') }}" type="text/css" media="screen" />
-        <script type="text/javascript" src="{{ asset('assets/js/venobox.min.js') }}"></script>
+        <script defer type="text/javascript" src="{{ asset('assets/js/venobox.min.js') }}"></script>
 
 
         <!-- Fonts -->
@@ -234,6 +234,6 @@
         </footer>
 
         <!-- jQuery (Add it before other scripts update to 3.6.4) -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="preload" href="https://code.jquery.com/jquery-3.6.0.min.js" as="script">
     </body>
 </html>
