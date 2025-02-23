@@ -42,11 +42,7 @@
 
         <!-- Venobox css -->
         <link rel="stylesheet" href="{{ asset('assets/css/venobox.min.css') }}" type="text/css" media="screen" />
-        <script type="text/javascript" src="{{ asset('assets/js/venobox.min.js') }}"></script>
-
-
-        <!-- Fonts -->
-        <link rel="preload" href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="{{ asset('assets/js/venobox.min.js') }}" as="script">
 
     </head>
     <body class="flex flex-col font-sans antialiased min-h-screen max-w-screen-xl mx-auto px-4 xl:px-0 bg-white dark:bg-[#282c35]">
