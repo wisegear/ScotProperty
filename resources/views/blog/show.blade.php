@@ -30,12 +30,12 @@
                 @if(count($page->getBodyHeadings('h2')) > 2)
                     <div class="toc my-10">
                         <h2 id="toc-title" class="mb-2 border-b border-gray-300 cursor-pointer dark:text-white">
-                            <i class="fa-solid fa-arrow-down-short-wide text-blue-600"></i> Table of contents
+                            <i class="fa-solid fa-arrow-down-short-wide text-lime-600"></i> Table of contents
                             <span id="toc-arrow" class="ml-2 transform transition-transform duration-200"></span>
                         </h2>
                         <ul id="toc-list" class="space-y-2 hidden">
                             @foreach($page->getBodyHeadings('h2') as $heading)
-                                <li><a href="#{{ Str::slug($heading) }}" class="hover:text-blue-700 dark:text-white">{{ $heading }}</a></li>
+                                <li><a href="#{{ Str::slug($heading) }}" class="hover:text-lime-600 dark:text-white">{{ $heading }}</a></li>
                             @endforeach
                         </ul>
                     </div>
@@ -93,38 +93,43 @@
                 </div>
             </div>
 
-            <!-- Previous / Next Navigation -->
-            @if ($previousPage || $nextPage)
-                <div class="flex justify-between space-x-10 items-center mb-10">
-                    @if ($previousPage)
-                        <a href="{{ url('/blog/' . $previousPage->slug) }}"
-                        class="text-slate-500 flex items-center">
-                            <div class="flex gap-4 items-center p-2">
-                                <i class="fa-solid fa-arrow-left ml-2"></i>
-                                <div>
-                                    <h3 class="font-semibold">{{ $previousPage->title }}</h3>
-                                </div>
-                            </div>
-                        </a>
-                    @else
-                        <span>No Older Posts</span> <!-- preserves space on the left if no previous -->
-                    @endif
-                    
-                    @if ($nextPage)
-                        <a href="{{ url('/blog/' . $nextPage->slug) }}"
-                        class="text-slate-500 flex items-center">
-                            <div class="flex gap-4 items-center p-2">
-                                <div>
-                                    <h3 class="font-semibold">{{ $nextPage->title }}</h3>
-                                </div>
-                                <i class="fa-solid fa-arrow-right mr-2"></i>
-                            </div>
-                        </a>
-                    @else
-                        <span>No Newer Posts</span> <!-- preserves space on the right if no next -->
-                    @endif
-                </div>
-            @endif
+        @if ($previousPage || $nextPage)
+            <div class="grid grid-cols-2 gap-6 items-center bg-white shadow-md rounded-lg p-6 mb-10">
+                @if ($previousPage)
+                    <a href="{{ url('/blog/' . $previousPage->slug) }}" 
+                       class="flex items-center space-x-4 group hover:bg-gray-100 p-4 rounded-lg transition">
+                        <img src="{{ '/assets/images/uploads/small_' . $previousPage->original_image }}" 
+                             alt="{{ $previousPage->title }}" 
+                             class="w-20 h-20 object-cover rounded-md shadow-sm">
+                        <div>
+                            <span class="text-sm text-gray-500">Previous Post</span>
+                            <h3 class="font-semibold text-gray-800 group-hover:text-lime-500 transition">
+                                {{ $previousPage->title }}
+                            </h3>
+                        </div>
+                    </a>
+                @else
+                    <div class="opacity-50 text-center text-gray-400">No Older Posts</div>
+                @endif
+        
+                @if ($nextPage)
+                    <a href="{{ url('/blog/' . $nextPage->slug) }}" 
+                       class="flex items-center space-x-4 justify-end text-right group hover:bg-gray-100 p-4 rounded-lg transition">
+                        <div>
+                            <span class="text-sm text-gray-500">Next Post</span>
+                            <h3 class="font-semibold text-gray-800 group-hover:text-lime-500 transition">
+                                {{ $nextPage->title }}
+                            </h3>
+                        </div>
+                        <img src="{{ '/assets/images/uploads/small_' . $nextPage->original_image }}" 
+                             alt="{{ $nextPage->title }}" 
+                             class="w-20 h-20 object-cover rounded-md shadow-sm">
+                    </a>
+                @else
+                    <div class="opacity-50 text-center text-gray-400">No Newer Posts</div>
+                @endif
+            </div>
+        @endif
 
             <!-- Comments section, layout and formatting handled in comments.blade.php -->
 
