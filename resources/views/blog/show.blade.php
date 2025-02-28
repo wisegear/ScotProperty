@@ -131,18 +131,27 @@
             </div>
         @endif
 
-            <!-- Comments section, layout and formatting handled in comments.blade.php -->
+        <!-- Comments section, layout and formatting handled in comments.blade.php -->
 
-            @include('comments', ['comments' => $page->comments, 'model' => $page])
+        @include('comments', ['comments' => $page->comments, 'model' => $page])
+
         </div>
-        <!-- Wrapper for the sidebar content -->
+
+        <!-- Sidebar Wrapper -->
         <div class="hidden md:block w-3/12 mt-10">
-            <H2 class="text-xl font-bold mb-4 dark:text-white">Recent Posts:</H2>
+            <h2 class="text-xl font-bold mb-4 dark:text-white border-b pb-2">Recent Posts</h2>
+            
             @foreach ($recentPages as $recentPage)
-                <div class="mb-6">
-                    <img src="{{ '/assets/images/uploads/' . 'large_' . $recentPage->original_image }}" class="h-[150px] w-full rounded border dark:border-gray-700 p-1" alt="">
-                    <h3 class="font-bold mt-2 dark:text-white"><a href="/blog/{{ $recentPage->slug }}">{{ $recentPage->title }}</a></h2>
-                </div>               
+                <a href="/blog/{{ $recentPage->slug }}" class="block group">
+                    <div class="mb-6 bg-white dark:bg-gray-800 rounded-lg transition">
+                        <img src="{{ '/assets/images/uploads/large_' . $recentPage->original_image }}" 
+                            class="h-[150px] w-full object-cover rounded-md border dark:border-gray-700" 
+                            alt="{{ $recentPage->title }}">
+                        <h3 class="font-semibold mt-2 text-gray-800 dark:text-white group-hover:text-lime-600 transition">
+                            {{ $recentPage->title }}
+                        </h3>
+                    </div>
+                </a>
             @endforeach
         </div>
 
