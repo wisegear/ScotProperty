@@ -41,9 +41,10 @@
                 @endforeach
             </div>
 
-            <!-- Pagination -->
-            <div class="mt-10 w-2/3 mx-auto">
-                {{ $posts->links() }}
+            <div class="mt-10 flex justify-center">
+                <div class="bg-white dark:bg-gray-800 rounded-lg p-4 flex gap-4 w-1/2 sm:w-auto">
+                    {{ $posts->links() }}
+                </div>
             </div>
 
         </div>

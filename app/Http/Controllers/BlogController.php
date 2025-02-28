@@ -49,7 +49,7 @@ public function index()
 
    } elseif (isset($_GET['tag'])) {
        $tag = $_GET['tag'];
-       $posts = BlogPosts::GetTags($tag)->paginate(6);
+       $posts = BlogPosts::GetTags($tag)->paginate(10)->onEachSide(1);
 
        // Keep the tag filter in the pagination links
        $posts->appends(['tag' => $tag]);
@@ -58,7 +58,7 @@ public function index()
        $posts = BlogPosts::with('BlogCategories', 'BlogTags', 'Users')
             ->where('published', true)
             ->orderBy('date', 'desc')
-            ->paginate(10);
+            ->simplePaginate(10);
    }
 
    $categories = BlogCategories::all();
