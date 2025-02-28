@@ -40,6 +40,10 @@
         <!-- FontAwesome -->
         <script async src="https://kit.fontawesome.com/0ff5084395.js" crossorigin="anonymous"></script>
 
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
         <!-- Venobox css -->
         <link rel="stylesheet" href="{{ asset('assets/css/venobox.min.css') }}" type="text/css" media="screen" />
         <script type="text/javascript" src="{{ asset('assets/js/venobox.min.js') }}"></script>
