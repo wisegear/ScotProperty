@@ -12,11 +12,11 @@
 }
 
 .wise1text blockquote {
-  @apply border-l-4 border-l-sky-700 my-6 px-4 ml-6;
+  @apply border-l-4 border-l-lime-800 dark:border-l-orange-200 my-6 px-4 ml-6;
 }
 
 .wise1text blockquote > p {
-  @apply text-sky-600;
+  @apply text-lime-800;
   @apply dark:text-orange-200;
 }
 
@@ -108,16 +108,13 @@ a { @apply hover:text-lime-800; @apply dark:hover:text-lime-500; }
   border: 1px solid lightgray;
   @apply dark:border-gray-600;
   @apply dark:text-gray-300;
-}
-
-.wise1text table, th, td {
-  padding: 5px 10px;
+  padding: 0px 10px;
+  @apply text-sm;
 }
 
 .wise1text th {
-  @apply bg-gray-500;
-  @apply bg-slate-500;
-  @apply text-white;
+  @apply bg-slate-200;
+  @apply dark:bg-slate-700;
   text-align: left;
 }
 

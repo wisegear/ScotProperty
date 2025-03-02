@@ -17,7 +17,7 @@
                 @endforeach
             </div>
 
-            <img src="{{ '/assets/images/uploads/' . 'large_' . $page->original_image }}" class="w-full h-[400px] shadow-lg border dark:border-gray-700 rounded" alt="">
+            <img src="{{ '/assets/images/uploads/' . 'large_' . $page->original_image }}" class="w-full shadow-lg border dark:border-gray-700 rounded" alt="">
     </div>
 
     <!-- Wrapper around post to split into post and sidebar -->
@@ -94,7 +94,7 @@
             </div>
 
         @if ($previousPage || $nextPage)
-            <div class="grid grid-cols-2 gap-6 items-center bg-white shadow-md rounded-lg p-6 mb-10">
+            <div class="grid grid-cols-2 gap-6 items-center bg-white shadow-md rounded-lg p-6 mb-10 dark:bg-gray-600">
                 @if ($previousPage)
                     <a href="{{ url('/blog/' . $previousPage->slug) }}" 
                        class="flex items-center space-x-4 group hover:bg-gray-100 p-4 rounded-lg transition">
@@ -102,8 +102,8 @@
                              alt="{{ $previousPage->title }}" 
                              class="w-20 h-20 object-cover rounded-md shadow-sm">
                         <div>
-                            <span class="text-sm text-gray-500">Previous Post</span>
-                            <h3 class="font-semibold text-gray-800 group-hover:text-lime-500 transition">
+                            <span class="text-sm text-gray-500 dark:text-gray-300">Previous Post</span>
+                            <h3 class="font-semibold text-gray-800 group-hover:text-lime-500 transition dark:text-gray-300">
                                 {{ $previousPage->title }}
                             </h3>
                         </div>
@@ -116,8 +116,8 @@
                     <a href="{{ url('/blog/' . $nextPage->slug) }}" 
                        class="flex items-center space-x-4 justify-end text-right group hover:bg-gray-100 p-4 rounded-lg transition">
                         <div>
-                            <span class="text-sm text-gray-500">Next Post</span>
-                            <h3 class="font-semibold text-gray-800 group-hover:text-lime-500 transition">
+                            <span class="text-sm text-gray-500 dark:text-gray-300">Next Post</span>
+                            <h3 class="font-semibold text-gray-800 group-hover:text-lime-500 transition dark:text-gray-300">
                                 {{ $nextPage->title }}
                             </h3>
                         </div>
@@ -126,7 +126,7 @@
                              class="w-20 h-20 object-cover rounded-md shadow-sm">
                     </a>
                 @else
-                    <div class="opacity-50 text-center text-gray-400">No Newer Posts</div>
+                    <div class="opacity-50 text-center text-gray-400 dark:text-gray-300">No Newer Posts</div>
                 @endif
             </div>
         @endif
